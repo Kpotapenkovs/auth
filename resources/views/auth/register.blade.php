@@ -10,46 +10,46 @@
 
 <form method="POST">
 
-<label>
+  <label>
 
-@csrf
+  @csrf
 
-@if ($errors->any())
-  <ul>
-    @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-    @endforeach
-  </ul>
-@endif
+  @if ($errors->any())
+    <ul>
+      @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  @endif
 
-<p>vārds: </p><input type="text" name="first_name" required>
+  <p>vārds: </p><input type="text" name="first_name" required>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<p>uzvārds: </p><input type="text" name="last_name" required>
+  <p>uzvārds: </p><input type="text" name="last_name" required>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<p>e-pasts: </p><input type="text" name="email" required>
+  <p>e-pasts: </p><input type="text" name="email" required>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<p>parole: </p><input type="password" name="password" required>
+  <p>parole: </p><input type="password" name="password" required>
 
-<br>
+  <br>
 
-<br>
-<p>paroles pastiprināšana: </p><input type="password" name="password_confirmation" required>
+  <br>
+  <p>paroles pastiprināšana: </p><input type="password" name="password_confirmation" required>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<button type="submit">reģistrēties</button>
+  <button type="submit">reģistrēties</button>
 
-</label>
+  </label>
 
 </form>
 
