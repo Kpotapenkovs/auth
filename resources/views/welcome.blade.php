@@ -8,13 +8,25 @@
 <body>
 @auth
   <p>Sveiks, {{ Auth::user()->first_name}}</p>
+
+<form action="/logout" method="POST">
+
+@csrf
+
+<button>atteikties</button>
+</form>
+
 @endauth
 
 @guest
   <p>Sveiks, viesi!</p>
+  <a href="/login">login</a>
+  <br>
+  <br>
+  <a href="/register">reģistrēties</a> 
 @endguest
 
 
-<a href="/register">reģistrēties</a> 
+
 </body>
 </html>
