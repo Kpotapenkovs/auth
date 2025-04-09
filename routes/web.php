@@ -10,12 +10,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [SessionController::class, 'create']);
+
+
+Route::get('/login', [SessionController::class, "create"])->name("login");
+
+Route::post('/', [SessionController::class, 'store']);
 
 Route::post('/logout', [SessionController::class, 'destroy']);
 
-Route::get('/register', [RegisterController::class, 'create']);
+
+Route::get('/register', [RegisterController::class, "create"])->middleware("guest");
 
 Route::post('/register', [RegisterController::class, 'store']);
-
 

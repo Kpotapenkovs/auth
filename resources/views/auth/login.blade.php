@@ -9,9 +9,21 @@
 
 <h1>login</h1>
 
-    <form method="POST">
-    e-pasts:<input type="email" name="email">
-    parole:<input type="password" name="password">
+    <form method="POST" action="/">
+
+    @csrf 
+
+    @if ($errors->any())
+    <ul>
+      @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  @endif
+
+    e-pasts:<input type="email" name="email" required>
+    parole:<input type="password" name="password" required>
+    <button>pieslēgties</button>
     </form>
 </body>
 </html>

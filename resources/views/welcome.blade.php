@@ -10,7 +10,6 @@
   <p>Sveiks, {{ Auth::user()->first_name}}</p>
 
 <form action="/logout" method="POST">
-
 @csrf
 
 <button>atteikties</button>
